@@ -34,6 +34,12 @@ struct ZLDeviceModel {
         case iPhoneXS              = "iPhone XS"
         case iPhoneXR              = "iPhone XR"
         case iPhoneXSMax           = "iPhone XSMax"
+        case iPhone11              = "iPhone 11"
+        case iPhone11Pro           = "iPhone Pro"
+        case iPhone11ProMax        = "iPhone Pro Max"
+        case iPhoneSE2             = "iPhone SE 2"
+        
+        
         
         case iPad1                 = "iPad 1"
         case iPad2                 = "iPad 2"
@@ -41,6 +47,7 @@ struct ZLDeviceModel {
         case iPad4                 = "iPad 4"
         case iPad5                 = "iPad 5"
         case iPad6                 = "iPad 6"
+        case iPad7                 = "iPad 7"
         
         case iPadMini              = "iPad Mini"
         case iPadMini2             = "iPad Mini 2"
@@ -59,6 +66,8 @@ struct ZLDeviceModel {
         case iPadPro10Dot5Inch     = "iPad Pro 10.5 Inch"
         case iPadPro11Inch         = "iPad Pro 11 Inch"
         case iPadPro12Dot9Inch3Gen = "iPad Pro 12.9 Inch 3"
+        case iPadPro11Inch2        = "iPad Pro 11 Inch 2"
+        case iPadPro12Dot9Inch4Gen = "iPad Pro 12.9 Inch 4"
         
         case iPodTouch1Gen         = "iPod Touch 1"
         case iPodTouch2Gen         = "iPod Touch 2"
@@ -66,6 +75,7 @@ struct ZLDeviceModel {
         case iPodTouch4Gen         = "iPod Touch 4"
         case iPodTouch5Gen         = "iPod Touch 5"
         case iPodTouch6Gen         = "iPod Touch 6"
+        case iPodTouch7Gen         = "iPod Touch 7"
         
         func deviceName() -> String
         {
@@ -130,6 +140,11 @@ struct ZLDeviceModel {
             "iPhone11,2" : .iPhoneXS,
             "iPhone11,4" : .iPhoneXSMax,
             "iPhone11,6" : .iPhoneXSMax,
+            "iPhone12,1" : .iPhone11,
+            "iPhone12,3" : .iPhone11Pro,
+            "iPhone12,5" : .iPhone11ProMax,
+            "iPhone12,8" : .iPhoneSE2,
+            
             "i386"       : .simulator,
             "x86_64"     : .simulator,
             
@@ -139,6 +154,7 @@ struct ZLDeviceModel {
             "iPad2,2"  : .iPad2,
             "iPad2,3"  : .iPad2,
             "iPad2,4"  : .iPad2,
+            
             "iPad2,5"  : .iPadMini,
             "iPad2,6"  : .iPadMini,
             "iPad2,7"  : .iPadMini,
@@ -163,7 +179,6 @@ struct ZLDeviceModel {
             "iPad5,1"  : .iPadMini4,
             "iPad5,2"  : .iPadMini4,
             
-            
             "iPad5,3"  : .iPadAir2,
             "iPad5,4"  : .iPadAir2,
             "iPad6,3"  : .iPadPro9Dot7Inch,
@@ -178,14 +193,26 @@ struct ZLDeviceModel {
             "iPad7,4"  : .iPadPro10Dot5Inch,
             "iPad7,5"  : .iPad6,
             "iPad7,6"  : .iPad6,
+            "iPad7,11" : .iPad7,
+            "iPad7,12" : .iPad7,
+            
             "iPad8,1"  : .iPadPro11Inch,
             "iPad8,2"  : .iPadPro11Inch,
             "iPad8,3"  : .iPadPro11Inch,
             "iPad8,4"  : .iPadPro11Inch,
+            
             "iPad8,5"  : .iPadPro12Dot9Inch3Gen,
             "iPad8,6"  : .iPadPro12Dot9Inch3Gen,
             "iPad8,7"  : .iPadPro12Dot9Inch3Gen,
             "iPad8,8"  : .iPadPro12Dot9Inch3Gen,
+            
+            "iPad8,9"  : .iPadPro11Inch2,
+            "iPad8,10" : .iPadPro11Inch2,
+            
+            "iPad8,11" : .iPadPro12Dot9Inch4Gen,
+            "iPad8,12" : .iPadPro12Dot9Inch4Gen,
+            
+            
             "iPad11,1" : .iPadMini5,
             "iPad11,2" : .iPadMini5,
             "iPad11,3" : .iPadAir3,
@@ -197,7 +224,8 @@ struct ZLDeviceModel {
             "iPod3,1" : .iPodTouch3Gen,
             "iPod4,1" : .iPodTouch4Gen,
             "iPod5,1" : .iPodTouch5Gen,
-            "iPod7,1" : .iPodTouch6Gen
+            "iPod7,1" : .iPodTouch6Gen,
+            "iPod9,1" : .iPodTouch7Gen,
         ]
     }()
     
@@ -224,6 +252,4 @@ struct ZLDeviceModel {
         let processInfo = ProcessInfo().operatingSystemVersion
         return SystemVersion(majorVersion: processInfo.majorVersion, minorVersion: processInfo.minorVersion, patchVersion: processInfo.patchVersion, systemVersion: UIDevice.current.systemVersion)
     }
-    
-    
 }
