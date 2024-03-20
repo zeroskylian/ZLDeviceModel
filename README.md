@@ -1,11 +1,19 @@
 # ZLDeviceModel
-show your device model name
+Show your device model name.
 
-use
+# Installation
+
+## Swift Package Manager
+
+-   File > Swift Packages > Add Package Dependency
+-   Add `https://github.com/zeroskylian/ZLDeviceModel.git `
+-   Select "Up to Next Major" with “1.0.0”
+
+# Use
 
 ```
-ZLDeviceModel.shared.deviceModel /// iPhone 4...
-ZLDeviceModel.shared.systemVersion.majorVersion /// 12
-ZLDeviceModel.shared.systemVersion.minorVersion /// 2
-ZLDeviceModel.shared.systemVersion.patchVersion /// 0
+ZLDeviceModel.current.deviceModel /// iPhone 4...
+ZLDeviceModel.current.systemVersion.majorVersion /// 12
+ZLDeviceModel.current.systemVersion.minorVersion /// 2
+ZLDeviceModel.current.systemVersion.patchVersion /// 0
 ```
