@@ -57,6 +57,11 @@ struct ZLDeviceModel {
         case iPhone14Pro           = "iPhone 14 Pro"
         case iPhone14ProMax        = "iPhone 14 Pro Max"
         
+        case iPhone15              = "iPhone 15"
+        case iPhone15Plus          = "iPhone 15 Plus"
+        case iPhone15Pro           = "iPhone 15 Pro"
+        case iPhone15ProMax        = "iPhone 15 Pro Max"
+        
         case iPad1                 = "iPad 1"
         case iPad2                 = "iPad 2"
         case iPad3                 = "iPad 3"
@@ -177,6 +182,11 @@ struct ZLDeviceModel {
             "iPhone14,8" : .iPhone14Plus,
             "iPhone15,2" : .iPhone14Pro,
             "iPhone15,3" : .iPhone14ProMax,
+            
+            "iPhone15,4" : .iPhone15,
+            "iPhone15,5" : .iPhone15Plus,
+            "iPhone16,1" : .iPhone15Pro,
+            "iPhone16,2" : .iPhone15ProMax,
             
             "i386"       : .simulator,
             "x86_64"     : .simulator,
