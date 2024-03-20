@@ -227,6 +227,7 @@ struct ZLDeviceModel {
             
             "i386"             : .simulator,
             "x86_64"           : .simulator,
+            "arm64"            : .simulator,
             
             // iPads
             "iPad1,1"          : .iPad1,
@@ -389,7 +390,6 @@ struct ZLDeviceModel {
             guard let value = element.value as? Int8, value != 0 else { return identifier }
             return identifier + String(UnicodeScalar(UInt8(value)))
         }
-        
         if let version = deviceNamesByCode[identifier] {
             return version
         } else {
