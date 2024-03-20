@@ -382,7 +382,7 @@ public struct ZLDeviceModel {
         ]
     }()
     
-    private static func getDeviceModel() -> DeviceModel {
+    public static func getDeviceIdentifier() -> String {
         var systemInfo = utsname()
         uname(&systemInfo)
         let machineMirror = Mirror(reflecting: systemInfo.machine)
@@ -390,6 +390,11 @@ public struct ZLDeviceModel {
             guard let value = element.value as? Int8, value != 0 else { return identifier }
             return identifier + String(UnicodeScalar(UInt8(value)))
         }
+        return identifier
+    }
+    
+    private static func getDeviceModel() -> DeviceModel {
+        let identifier = getDeviceIdentifier()
         if let version = deviceNamesByCode[identifier] {
             return version
         } else {
