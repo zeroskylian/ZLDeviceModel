@@ -106,6 +106,13 @@ struct ZLDeviceModel {
         case iPodTouch6Gen         = "iPod Touch 6"
         case iPodTouch7Gen         = "iPod Touch 7"
         
+        case AppleTV               = "Apple TV"
+        case AppleTV2              = "Apple TV 2"
+        case AppleTV3              = "Apple TV 3"
+        case AppleTV4              = "Apple TV 4"
+        case AppleTV4K             = "Apple TV 4K"
+        case AppleTV4K2            = "Apple TV 4K 2"
+        
         func deviceName() -> String {
             return rawValue
         }
@@ -136,7 +143,7 @@ struct ZLDeviceModel {
     
     private static let deviceNamesByCode: [String:DeviceModel] = {
         return [
-            //iPhones
+            // iPhones
             "iPhone3,1"  : .iPhone4,
             "iPhone3,2"  : .iPhone4,
             "iPhone3,3"  : .iPhone4,
@@ -199,7 +206,7 @@ struct ZLDeviceModel {
             "i386"       : .simulator,
             "x86_64"     : .simulator,
             
-            //iPads
+            // iPads
             "iPad1,1"  : .iPad1,
             "iPad2,1"  : .iPad2,
             "iPad2,2"  : .iPad2,
@@ -278,8 +285,7 @@ struct ZLDeviceModel {
             "iPad14,1" : .iPadMini6,
             "iPad14,2" : .iPadMini6,
             
-            
-            //iPods
+            // iPods
             "iPod1,1" : .iPodTouch1Gen,
             "iPod2,1" : .iPodTouch2Gen,
             "iPod3,1" : .iPodTouch3Gen,
@@ -287,6 +293,16 @@ struct ZLDeviceModel {
             "iPod5,1" : .iPodTouch5Gen,
             "iPod7,1" : .iPodTouch6Gen,
             "iPod9,1" : .iPodTouch7Gen,
+            
+            // Apple TV
+            "AppleTV1,1" : .AppleTV,
+            "AppleTV2,1" : .AppleTV2,
+            "AppleTV3,1" : .AppleTV3,
+            "AppleTV3,2" : .AppleTV3,
+            "AppleTV5,3" : .AppleTV4,
+            "AppleTV6,2" : .AppleTV4K,
+            "AppleTV11,1" : .AppleTV4K2,
+            
         ]
     }()
     
