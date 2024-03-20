@@ -13,7 +13,7 @@
 		5B74383B24C29D1F0072041E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B74383924C29D1F0072041E /* Main.storyboard */; };
 		5B74383D24C29D200072041E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5B74383C24C29D200072041E /* Assets.xcassets */; };
 		5B74384024C29D200072041E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B74383E24C29D200072041E /* LaunchScreen.storyboard */; };
-		5B74384924C29D670072041E /* ZLDeviceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B74384824C29D670072041E /* ZLDeviceModel.swift */; };
+		8C53B8A12BAAD4C4004DFA2F /* ZLDeviceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C53B8A02BAAD4C4004DFA2F /* ZLDeviceModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,7 +25,7 @@
 		5B74383C24C29D200072041E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5B74383F24C29D200072041E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5B74384124C29D200072041E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5B74384824C29D670072041E /* ZLDeviceModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZLDeviceModel.swift; sourceTree = "<group>"; };
+		8C53B8A02BAAD4C4004DFA2F /* ZLDeviceModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZLDeviceModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,7 +58,7 @@
 		5B74383224C29D1F0072041E /* ZLDeviceModel */ = {
 			isa = PBXGroup;
 			children = (
-				5B74384724C29D670072041E /* Core */,
+				8C53B89F2BAAD4C4004DFA2F /* ZLDeviceModel */,
 				5B74383324C29D1F0072041E /* AppDelegate.swift */,
 				5B74383524C29D1F0072041E /* SceneDelegate.swift */,
 				5B74383724C29D1F0072041E /* ViewController.swift */,
@@ -70,12 +70,13 @@
 			path = ZLDeviceModel;
 			sourceTree = "<group>";
 		};
-		5B74384724C29D670072041E /* Core */ = {
+		8C53B89F2BAAD4C4004DFA2F /* ZLDeviceModel */ = {
 			isa = PBXGroup;
 			children = (
-				5B74384824C29D670072041E /* ZLDeviceModel.swift */,
+				8C53B8A02BAAD4C4004DFA2F /* ZLDeviceModel.swift */,
 			);
-			path = Core;
+			name = ZLDeviceModel;
+			path = Sources/ZLDeviceModel;
 			sourceTree = SOURCE_ROOT;
 		};
 /* End PBXGroup section */
@@ -150,7 +151,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5B74383824C29D1F0072041E /* ViewController.swift in Sources */,
-				5B74384924C29D670072041E /* ZLDeviceModel.swift in Sources */,
+				8C53B8A12BAAD4C4004DFA2F /* ZLDeviceModel.swift in Sources */,
 				5B74383424C29D1F0072041E /* AppDelegate.swift in Sources */,
 				5B74383624C29D1F0072041E /* SceneDelegate.swift in Sources */,
 			);
