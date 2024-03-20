@@ -12,6 +12,7 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         let lb = UILabel(frame: view.bounds)
         lb.textAlignment = .center
         lb.text = ZLDeviceModel.shared.deviceModel.deviceName()

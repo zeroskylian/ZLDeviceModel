@@ -5,8 +5,8 @@
 //  Created by 廉鑫博 on 2019/3/28.
 //  Copyright © 2019 廉鑫博. All rights reserved.
 // https://www.theiphonewiki.com/wiki/Models
+// https://theapplewiki.com/wiki/Models
 
-import Foundation
 import UIKit
 
 struct ZLDeviceModel {
@@ -77,8 +77,7 @@ struct ZLDeviceModel {
         case iPodTouch6Gen         = "iPod Touch 6"
         case iPodTouch7Gen         = "iPod Touch 7"
         
-        func deviceName() -> String
-        {
+        func deviceName() -> String {
             return rawValue
         }
     }
@@ -106,7 +105,7 @@ struct ZLDeviceModel {
         systemVersion = ZLDeviceModel.getSystemVersion()
     }
     
-    private static let deviceNamesByCode : [String:DeviceModel] = {
+    private static let deviceNamesByCode: [String:DeviceModel] = {
         return [
             //iPhones
             "iPhone3,1"  : .iPhone4,
@@ -229,8 +228,7 @@ struct ZLDeviceModel {
         ]
     }()
     
-    private static func getDeviceModel() ->  DeviceModel
-    {
+    private static func getDeviceModel() -> DeviceModel {
         var systemInfo = utsname()
         uname(&systemInfo)
         let machineMirror = Mirror(reflecting: systemInfo.machine)
@@ -238,17 +236,15 @@ struct ZLDeviceModel {
             guard let value = element.value as? Int8, value != 0 else { return identifier }
             return identifier + String(UnicodeScalar(UInt8(value)))
         }
-        if let version = deviceNamesByCode[identifier]
-        {
+        
+        if let version = deviceNamesByCode[identifier] {
             return version
-        }else
-        {
+        } else {
             return .unknowDevice
         }
     }
     
-    private static func getSystemVersion() -> SystemVersion
-    {
+    private static func getSystemVersion() -> SystemVersion {
         let processInfo = ProcessInfo().operatingSystemVersion
         return SystemVersion(majorVersion: processInfo.majorVersion, minorVersion: processInfo.minorVersion, patchVersion: processInfo.patchVersion, systemVersion: UIDevice.current.systemVersion)
     }
