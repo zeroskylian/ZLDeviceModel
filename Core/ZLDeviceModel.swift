@@ -29,17 +29,33 @@ struct ZLDeviceModel {
         case iPhone7Plus           = "iPhone 7Plus"
         case iPhone8               = "iPhone 8"
         case iPhone8Plus           = "iPhone 8Plus"
+        
         case iPhoneX               = "iPhone X"
         case iPhoneSE              = "iPhone SE"
         case iPhoneXS              = "iPhone XS"
         case iPhoneXR              = "iPhone XR"
         case iPhoneXSMax           = "iPhone XSMax"
+        
         case iPhone11              = "iPhone 11"
-        case iPhone11Pro           = "iPhone Pro"
-        case iPhone11ProMax        = "iPhone Pro Max"
+        case iPhone11Pro           = "iPhone 11 Pro"
+        case iPhone11ProMax        = "iPhone 11 Pro Max"
         case iPhoneSE2             = "iPhone SE 2"
         
+        case iPhone12mini          = "iPhone 12 mini"
+        case iPhone12              = "iPhone 12"
+        case iPhone12Pro           = "iPhone 12 Pro"
+        case iPhone12ProMax        = "iPhone 12 Pro Max"
         
+        case iPhone13mini          = "iPhone 13 mini"
+        case iPhone13              = "iPhone 13"
+        case iPhone13Pro           = "iPhone 13 Pro"
+        case iPhone13ProMax        = "iPhone 13 Pro Max"
+        case iPhoneSE3             = "iPhone SE 3"
+        
+        case iPhone14              = "iPhone 14"
+        case iPhone14Plus          = "iPhone 14 Plus"
+        case iPhone14Pro           = "iPhone 14 Pro"
+        case iPhone14ProMax        = "iPhone 14 Pro Max"
         
         case iPad1                 = "iPad 1"
         case iPad2                 = "iPad 2"
@@ -133,16 +149,34 @@ struct ZLDeviceModel {
             "iPhone10,4" : .iPhone8,
             "iPhone10,2" : .iPhone8Plus,
             "iPhone10,5" : .iPhone8Plus,
+            
             "iPhone10,3" : .iPhoneX,
             "iPhone10,6" : .iPhoneX,
             "iPhone11,8" : .iPhoneXR,
             "iPhone11,2" : .iPhoneXS,
             "iPhone11,4" : .iPhoneXSMax,
             "iPhone11,6" : .iPhoneXSMax,
+            
             "iPhone12,1" : .iPhone11,
             "iPhone12,3" : .iPhone11Pro,
             "iPhone12,5" : .iPhone11ProMax,
             "iPhone12,8" : .iPhoneSE2,
+            
+            "iPhone13,1" : .iPhone12mini,
+            "iPhone13,2" : .iPhone12,
+            "iPhone13,3" : .iPhone12Pro,
+            "iPhone13,4" : .iPhone12ProMax,
+            
+            "iPhone14,4" : .iPhone13mini,
+            "iPhone14,5" : .iPhone13,
+            "iPhone14,2" : .iPhone13Pro,
+            "iPhone14,3" : .iPhone13ProMax,
+            "iPhone14,6" : .iPhoneSE3,
+            
+            "iPhone14,7" : .iPhone14,
+            "iPhone14,8" : .iPhone14Plus,
+            "iPhone15,2" : .iPhone14Pro,
+            "iPhone15,3" : .iPhone14ProMax,
             
             "i386"       : .simulator,
             "x86_64"     : .simulator,
