@@ -97,6 +97,8 @@ struct ZLDeviceModel {
         case iPadPro12Dot9Inch4Gen = "iPad Pro 12.9 Inch 4"
         case iPadPro11Inch3        = "iPad Pro 11 Inch 3"
         case iPadPro12Dot9Inch5Gen = "iPad Pro 12.9 Inch 5"
+        case iPadPro11Inch4        = "iPad Pro 11 Inch 4"
+        case iPadPro12Dot9Inch6Gen = "iPad Pro 12.9 Inch 6"
         
         case iPodTouch1Gen         = "iPod Touch 1"
         case iPodTouch2Gen         = "iPod Touch 2"
@@ -112,6 +114,7 @@ struct ZLDeviceModel {
         case AppleTV4              = "Apple TV 4"
         case AppleTV4K             = "Apple TV 4K"
         case AppleTV4K2            = "Apple TV 4K 2"
+        case AppleTV4K3            = "Apple TV 4K 3"
         
         case AppleWatch            = "Apple Watch"
         case AppleWatchS1          = "Apple Watch Series 1"
@@ -122,11 +125,13 @@ struct ZLDeviceModel {
         case AppleWatchS6          = "Apple Watch Series 6"
         case AppleWatchS7          = "Apple Watch Series 7"
         case AppleWatchS8          = "Apple Watch Series 8"
+        case AppleWatchS9          = "Apple Watch Series 9"
         
         case AppleWatchSE          = "Apple Watch SE"
         case AppleWatchSE2         = "Apple Watch SE2"
         
         case AppleWatchUltra       = "Apple Watch Ultra"
+        case AppleWatchUltra2      = "Apple Watch Ultra 2"
         
         func deviceName() -> String {
             return rawValue
@@ -299,6 +304,10 @@ struct ZLDeviceModel {
             "iPad13,19"   : .iPad10,
             "iPad14,1"    : .iPadMini6,
             "iPad14,2"    : .iPadMini6,
+            "iPad14,3"    : .iPadPro11Inch4,
+            "iPad14,4"    : .iPadPro11Inch4,
+            "iPad14,5"    : .iPadPro12Dot9Inch6Gen,
+            "iPad14,6"    : .iPadPro12Dot9Inch6Gen,
             
             // iPods
             "iPod1,1"     : .iPodTouch1Gen,
@@ -317,6 +326,7 @@ struct ZLDeviceModel {
             "AppleTV5,3"  : .AppleTV4,
             "AppleTV6,2"  : .AppleTV4K,
             "AppleTV11,1" : .AppleTV4K2,
+            "AppleTV14,1" : .AppleTV4K3,
             
             // Apple Watch
             "Watch1,1"    : .AppleWatch,
@@ -358,6 +368,11 @@ struct ZLDeviceModel {
             "Watch6,16"   : .AppleWatchS8,
             "Watch6,17"   : .AppleWatchS8,
             "Watch6,18"   : .AppleWatchUltra,
+            "Watch7,1"    : .AppleWatchS9,
+            "Watch7,2"    : .AppleWatchS9,
+            "Watch7,3"    : .AppleWatchS9,
+            "Watch7,4"    : .AppleWatchS9,
+            "Watch7,5"    : .AppleWatchUltra2,
         ]
     }()
     
