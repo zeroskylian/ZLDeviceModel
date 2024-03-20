@@ -1,17 +1,17 @@
 //
 //  PhoneVersion.swift
-//  UiOSProject
+//  ZLDeviceModel
 //
-//  Created by 廉鑫博 on 2019/3/28.
-//  Copyright © 2019 廉鑫博. All rights reserved.
-// https://www.theiphonewiki.com/wiki/Models
-// https://theapplewiki.com/wiki/Models
+//  Created by lianxinbo on 2019/3/28.
+//  Copyright © 2019 lianxinbo. All rights reserved.
+//  https://www.theiphonewiki.com/wiki/Models
+//  https://theapplewiki.com/wiki/Models
 
 import UIKit
 
-struct ZLDeviceModel {
+public struct ZLDeviceModel {
     
-    enum DeviceModel : String {
+   public enum DeviceModel: String {
         
         case unknowDevice = "Unknow Device"
         case simulator  = "Simulator"
@@ -140,7 +140,7 @@ struct ZLDeviceModel {
         }
     }
     
-    struct SystemVersion {
+    public struct SystemVersion {
         
         public let majorVersion: Int
         
@@ -152,9 +152,9 @@ struct ZLDeviceModel {
     }
     
     
-    public static let shared : ZLDeviceModel = ZLDeviceModel()
+    public static let current: ZLDeviceModel = ZLDeviceModel()
     
-    public let deviceModel:DeviceModel
+    public let deviceModel: DeviceModel
     
     public let systemVersion: SystemVersion
     

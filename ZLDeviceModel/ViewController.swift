@@ -15,7 +15,7 @@ class ViewController: UIViewController {
         
         let lb = UILabel(frame: view.bounds)
         lb.textAlignment = .center
-        lb.text = ZLDeviceModel.shared.deviceModel.deviceName()
+        lb.text = ZLDeviceModel.current.deviceModel.deviceName()
         view.addSubview(lb)
     }
 }
