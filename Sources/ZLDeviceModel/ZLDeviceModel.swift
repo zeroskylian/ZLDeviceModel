@@ -11,7 +11,7 @@ import UIKit
 
 public struct ZLDeviceModel {
     
-   public enum DeviceModel: String {
+    public enum DeviceModel: String {
         
         case unknowDevice = "Unknow Device"
         case simulator  = "Simulator"
@@ -163,7 +163,7 @@ public struct ZLDeviceModel {
         systemVersion = ZLDeviceModel.getSystemVersion()
     }
     
-    private static let deviceNamesByCode: [String:DeviceModel] = {
+    private static let deviceNamesByCode: [String: DeviceModel] = {
         return [
             // iPhones
             "iPhone3,1"        : .iPhone4,
@@ -405,5 +405,26 @@ public struct ZLDeviceModel {
     private static func getSystemVersion() -> SystemVersion {
         let processInfo = ProcessInfo().operatingSystemVersion
         return SystemVersion(majorVersion: processInfo.majorVersion, minorVersion: processInfo.minorVersion, patchVersion: processInfo.patchVersion, systemVersion: UIDevice.current.systemVersion)
+    }
+}
+
+public extension ZLDeviceModel.DeviceModel {
+    
+    var supportFaceID: Bool {
+        switch self {
+        case .iPhoneX, .iPhoneXS, .iPhoneXR, .iPhoneXSMax,
+                .iPhone11, .iPhone11Pro, .iPhone11ProMax,
+                .iPhone12mini, .iPhone12, .iPhone12Pro, .iPhone12ProMax,
+                .iPhone13mini, .iPhone13, .iPhone13Pro, .iPhone13ProMax,
+                .iPhone14, .iPhone14Plus, .iPhone14Pro, .iPhone14ProMax,
+                .iPhone15, .iPhone15Plus, .iPhone15Pro, .iPhone15ProMax:
+            return true
+        case .iPadPro12Dot9Inch3Gen, .iPadPro12Dot9Inch4Gen, .iPadPro12Dot9Inch5Gen, .iPadPro12Dot9Inch6Gen:
+            return true
+        case .iPadPro11Inch, .iPadPro11Inch2, .iPadPro11Inch3, .iPadPro11Inch4:
+            return true
+        default:
+            return false
+        }
     }
 }
