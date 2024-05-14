@@ -85,6 +85,8 @@ public struct ZLDeviceModel {
         case iPadAir3              = "iPad Air 3"
         case iPadAir4              = "iPad Air 4"
         case iPadAir5              = "iPad Air 5"
+        case iPadAir11Inch         = "iPad Air 11 Inch M2"
+        case iPadAir13Inch         = "iPad Air 13 Inch M2"
         
         case iPadPro12Dot9Inch     = "iPad Pro 12.9 Inch"
         case iPadPro9Dot7Inch      = "iPad Pro 9.7 Inch"
@@ -99,6 +101,8 @@ public struct ZLDeviceModel {
         case iPadPro12Dot9Inch5Gen = "iPad Pro 12.9 Inch 5"
         case iPadPro11Inch4        = "iPad Pro 11 Inch 4"
         case iPadPro12Dot9Inch6Gen = "iPad Pro 12.9 Inch 6"
+        case iPadPro11InchM4       = "iPad Pro 11 Inch M4"
+        case iPadPro13InchM4       = "iPad Pro 13 Inch M4"
         
         case iPodTouch1Gen         = "iPod Touch 1"
         case iPodTouch2Gen         = "iPod Touch 2"
@@ -311,6 +315,15 @@ public struct ZLDeviceModel {
             "iPad14,4"         : .iPadPro11Inch4,
             "iPad14,5"         : .iPadPro12Dot9Inch6Gen,
             "iPad14,6"         : .iPadPro12Dot9Inch6Gen,
+            "iPad14,8"         : .iPadAir11Inch,
+            "iPad14,9"         : .iPadAir11Inch,
+            "iPad14,10"        : .iPadAir13Inch,
+            "iPad14,11"        : .iPadAir13Inch,
+            "iPad16,3"         : .iPadPro11InchM4,
+            "iPad16,4"         : .iPadPro11InchM4,
+            "iPad16,5"         : .iPadPro13InchM4,
+            "iPad16,6"         : .iPadPro13InchM4,
+            
             
             // iPods
             "iPod1,1"          : .iPodTouch1Gen,
